@@ -13,7 +13,7 @@
     <div class="container mx-auto px-4 relative z-10">
       <UiSectionHeading>My Projects</UiSectionHeading>
 
-      <div class="mt-16 grid md:grid-cols-1 lg:grid-cols-1 gap-8 mx-72">
+      <div class="mt-16 grid md:grid-cols-2 lg:grid-cols-2 gap-8">
         <UiProjectCard
           v-for="project in projects"
           :key="project.id"
@@ -51,15 +51,35 @@
 
 <script setup>
 const projects = [
+  // {
+  //   id: 1,
+  //   title: "Chula Meeting Booking",
+  //   description:
+  //     "A meeting room booking system with user authentication, date/room selection, and booking details input.",
+  //   image: "/images/chula-meeting-booking-demo.jpg",
+  //   tags: ["Next.js", "Tailwind CSS", "MongoDB"],
+  //   demoUrl: "https://chula-meeting-booking.vercel.app/",
+  //   githubUrl: "https://github.com/sukit12009/chula-meeting-booking",
+  // },
   {
-    id: 1,
-    title: "Chula Meeting Booking",
+    id: 2,
+    title: "Todo List Frontend",
     description:
-      "A meeting room booking system with user authentication, date/room selection, and booking details input.",
-    image: "/images/chula-meeting-booking-demo.jpg",
-    tags: ["Next.js", "Tailwind CSS", "MongoDB"],
-    demoUrl: "https://chula-meeting-booking.vercel.app/",
-    githubUrl: "https://github.com/sukit12009/chula-meeting-booking",
+      "A lightweight web app to help users create, track, and complete their to-do tasks with ease.",
+    image: "/images/to-do-list-web-demo.jpg",
+    tags: ["ReactJS", "Tailwind CSS"],
+    demoUrl: "https://to-do-list-web-beryl.vercel.app/",
+    githubUrl: "https://github.com/sukit12009/to-do-list-web",
+  },
+  {
+    id: 3,
+    title: "Todo List Backend",
+    description:
+      "A simple RESTful API for managing a to-do list with tasks that can be created, viewed, updated, and deleted.",
+    image: "/images/to-do-list-api-demo.jpg",
+    tags: ["Go", "Swagger", "PostgreSQL"],
+    demoUrl: "https://to-do-list-api-am59.onrender.com/swagger/index.html",
+    githubUrl: "https://github.com/sukit12009/to-do-list-api",
   },
 ];
 </script>
