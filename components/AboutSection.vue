@@ -28,7 +28,7 @@
           </div>
 
           <div class="mt-10">
-            <UiBaseButton secondary href="/resume.pdf" target="_blank" class="group">
+            <UiBaseButton secondary :onClick="downloadResume">
               <span class="flex items-center">
                 <span>Download Resume</span>
                 <svg
@@ -80,5 +80,10 @@
 </template>
 
 <script setup>
-// SectionHeading component is imported automatically by Nuxt
+function downloadResume() {
+  const link = document.createElement('a')
+  link.href = '/files/resume.pdf' 
+  link.download = 'Sukit-Chowandee-Resume.pdf' 
+  link.click()
+}
 </script>

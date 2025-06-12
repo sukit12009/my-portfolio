@@ -1,5 +1,5 @@
 <template>
-  <component :is="tag" :href="href" :target="target" :type="type"
+  <component :is="tag" :href="href" :target="target" :type="type" :onClick="onClick"
     class="inline-block px-6 py-3 rounded-md font-medium transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-slate-900"
     :class="[
       primary ? 'bg-sky-500 hover:bg-sky-600 text-white focus:ring-sky-500' : '',
@@ -30,6 +30,7 @@ defineProps({
     type: String,
     default: 'button'
   },
-  className: String
+  className: String,
+  onClick: Function
 });
 </script>
